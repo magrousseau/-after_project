@@ -1,1 +1,11 @@
 <h1>All the blog articles</h1>
+
+<% @articles.each do |article| %>
+  <%= cl_image_tag article.photos.first.key, height: 200, width: 300, crop: :fill %>
+  <h1><%= link_to article.title, blog_article_path(article) %></h1>
+  <h3> written by : <%= article.user.first_name %>  on the <%= article.date %></h3>
+  <p> <%= article.description %> </p>
+  <h4><%= link_to "read more", blog_article_path(article) %></h4>
+
+
+<% end %>
