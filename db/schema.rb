@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_21_185053) do
+ActiveRecord::Schema.define(version: 2020_12_22_173637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,32 @@ ActiveRecord::Schema.define(version: 2020_12_21_185053) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_blog_articles_on_user_id"
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.text "bio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "podcast_invitations", force: :cascade do |t|
+    t.bigint "guest_id", null: false
+    t.bigint "podcast_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["guest_id"], name: "index_podcast_invitations_on_guest_id"
+    t.index ["podcast_id"], name: "index_podcast_invitations_on_podcast_id"
+  end
+
+  create_table "podcasts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "link"
+    t.date "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +67,6 @@ ActiveRecord::Schema.define(version: 2020_12_21_185053) do
   end
 
   add_foreign_key "blog_articles", "users"
+  add_foreign_key "podcast_invitations", "guests"
+  add_foreign_key "podcast_invitations", "podcasts"
 end
