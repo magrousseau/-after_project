@@ -7,11 +7,18 @@
   height:100%;
 }
 
-.backgound-home-image{
+.background-home-image{
   width: 100%;
   position: absolute;
   top: 0px;
-  z-index: -1;
+  // left: 200px;
+  z-index: -10;
+}
+
+.background-home{
+  z-index: -100;
+  position: absolute;
+  bottom: 0px;
 }
 
 

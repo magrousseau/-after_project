@@ -20,3 +20,25 @@
 }
 
 
+.btn-yellow-black{
+  border: 3px solid $yellow;
+  color: $yellow;
+  // box-shadow: 0px 2px #00000029;
+  // text-shadow: 0px 1px #00000029;
+  background: $black;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  // left: calc(50% - 189px/2 - 342.5px);
+  // top: calc(50% - 46px/2 - 638px);
+  &:hover{
+    text-decoration: none;
+    color: $yellow;
+    border: 3px solid $yellow;
+    background: #00000029;
+  }
+}
+
+.btn-card{
+  position: absolute;
+  bottom: 24px;
+  right: 30px;
+}

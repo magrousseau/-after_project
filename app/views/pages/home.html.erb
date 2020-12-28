@@ -3,14 +3,67 @@
   </div>
 </div> -->
 
-<%= image_tag('/assets/background/girl.jpg', class: "backgound-home-image") %>
+<!-- <div class="background-home"> -->
+  <%= image_tag('/assets/background/girl.jpg', class: "background-home-image") %>
+  <%= image_tag('/assets/background/girl.jpg', class: "background-home") %>
 
-<div class="content-container">
-  <div class="banner-big banner-container">
-    <h1>L'After</h1>
-    <h4 class="mb-5">Work - Sport : découvrez le monde de l'après ! </h4>
-    <%= link_to "Je découvre",root_path, class:"button btn-yellow-grey" %>
+  <div class="content-container">
+    <div class="banner-big banner-container">
+      <h1>L'After</h1>
+      <h4 class="mb-5">Work - Sport : découvrez le monde de l'après ! </h4>
+      <%= link_to "Je découvre",root_path, class:"button btn-yellow-grey" %>
+    </div>
+    <div class="card-container mt-5">
+     <!--  <div class="row">
+        <div class="col-6">
+   -->    <div class="home-card">
+            <%= image_tag('/assets/background/bicolor.jpg', class: "backgound-home-card-image") %>
+              <div class="text-content">
+                <div class="header-content">
+                  <h2 class="underline-big">Podcast</h2>
+                </div>
+                <h4>sous-titre</h4>
+                <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
+              </div>
+          </div>
+
+          <div class="home-card">
+            <%= image_tag('/assets/background/3girls.jpg', class: "backgound-home-card-image") %>
+              <div class="text-content">
+                <div class="header-content">
+                  <h2 class="underline-big">Qui sommes-nous ?</h2>
+                </div>
+                <h4>sous-titre</h4>
+                <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
+              </div>
+          </div>
+
+          <div class="home-card">
+            <%= image_tag('/assets/background/yoga.jpg', class: "backgound-home-card-image") %>
+              <div class="text-content">
+                <div class="header-content">
+                  <h2 class="underline-big">Blog</h2>
+                </div>
+                <h4>sous-titre</h4>
+                <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
+              </div>
+          </div>
+
+          <div class="home-card">
+            <%= image_tag('/assets/background/desk1.jpg', class: "backgound-home-card-image") %>
+              <div class="text-content">
+                <div class="header-content">
+                  <h2 class="underline-big">Contactez-nous</h2>
+                </div>
+                <h4>sous-titre</h4>
+                <%= link_to "Je découvre", root_path, class:"button btn-yellow-black btn-card"  %>
+              </div>
+          </div>
+        <!-- </div>
+      </div> -->
+    </div>
   </div>
-</div>
+<!-- </div> -->
+
 
 
