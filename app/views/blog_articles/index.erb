@@ -1,11 +1,24 @@
-<h1>All the blog articles</h1>
+<%= image_tag('/assets/background/girl.jpg', class: "background-home-image") %>
 
-<% @articles.each do |article| %>
-  <%= cl_image_tag article.photos.first.key, height: 200, width: 300, crop: :fill %>
-  <h1><%= link_to article.title, blog_article_path(article) %></h1>
-  <h3> written by : <%= article.user.first_name %>  on the <%= article.date %></h3>
-  <p> <%= article.description %> </p>
-  <h4><%= link_to "read more", blog_article_path(article) %></h4>
+<div class="content-container">
+  <h1>Filtrer par thématiques</h1>
 
-
-<% end %>
+  <% @articles.each do |article| %>
+    <div class="blog-card-container">
+      <%= cl_image_tag article.photos.first.key, width: 300, crop: :fill, class:"blog-card-img" %>
+      <div class="blog-card-text-content">
+        <div class="blog-card-content">
+          <div class="card-title-content">
+            <h2><%= link_to article.title, blog_article_path(article) %></h2>
+            <h5> written by : <%= article.user.first_name %> </h5>
+          </div>
+          <p> <%= article.description %> </p>
+        </div>
+        <div class="container-btn">
+          <h5><%= article.date %></h5>
+          <%= link_to "Je découvre",blog_article_path(article), class:"button btn-yellow-black" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
