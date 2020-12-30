@@ -5,62 +5,74 @@
 
 <!-- <div class="background-home"> -->
   <%= image_tag('https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fHNwb3J0cyUyMGdpcmx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "background-home-image") %>
-  <%= image_tag('https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fHNwb3J0cyUyMGdpcmx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "background-home") %>
+  <%#= image_tag('https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fHNwb3J0cyUyMGdpcmx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "background-home") %>
 
   <div class="content-container">
     <div class="banner-big banner-container">
       <h1>L'After</h1>
-      <h4 class="mb-5">Work - Sport : découvrez le monde de l'après ! </h4>
+      <h4 class="mb-5 subtitle-light">Work - Sport : découvrez le monde de l'après ! </h4>
       <%= link_to "Je découvre",root_path, class:"button btn-yellow-grey" %>
     </div>
+    <div class="mt-5 mb-5 text-padding text-start">
+      <h3 class="">Bienvenue dans notre univers</h3>
+      <p class="">
+        Postremo ad id indignitatis est ventum, ut cum peregrini ob formidatam haut ita dudum alimentorum
+        inopiam pellerentur ab urbe praecipites, sectatoribus disciplinarum liberalium inpendio paucis
+        sine respiratione ulla extrusis, tenerentur minimarum adseclae veri, quique.
+      </p>
+    </div>
     <div class="card-container mt-5">
-     <!--  <div class="row">
-        <div class="col-6">
-   -->    <div class="home-card">
-            <%= image_tag('https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8YmxvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
-              <div class="text-content">
-                <div class="header-content">
-                  <h2 class="underline-big">Podcast</h2>
-                </div>
-                <h4>sous-titre</h4>
-                <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
-              </div>
+      <div class="home-card">
+        <%= image_tag('https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8YmxvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
+          <div class="text-content">
+            <div class="header-content">
+              <h2 class="underline-big">Podcast</h2>
+            </div>
+            <h4>sous-titre</h4>
+            <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
           </div>
+      </div>
 
-          <div class="home-card">
-            <%= image_tag('https://images.unsplash.com/photo-1518605360659-2aa9659ef66d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI5fHwzJTIwd29tZW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
-              <div class="text-content">
-                <div class="header-content">
-                  <h2 class="underline-big">Qui sommes-nous ?</h2>
-                </div>
-                <h4>sous-titre</h4>
-                <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
-              </div>
+      <div class="home-card">
+        <%= image_tag('https://images.unsplash.com/photo-1518605360659-2aa9659ef66d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI5fHwzJTIwd29tZW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
+          <div class="text-content">
+            <div class="header-content">
+              <h2 class="underline-big">Qui sommes-nous ?</h2>
+            </div>
+            <h4>sous-titre</h4>
+            <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
           </div>
+      </div>
 
-          <div class="home-card">
-            <%= image_tag('https://images.unsplash.com/photo-1593164842249-d74fc06dae05?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
-              <div class="text-content">
-                <div class="header-content">
-                  <h2 class="underline-big">Blog</h2>
-                </div>
-                <h4>sous-titre</h4>
-                <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
-              </div>
+      <div class="home-card">
+        <%= image_tag('https://images.unsplash.com/photo-1593164842249-d74fc06dae05?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
+          <div class="text-content">
+            <div class="header-content">
+              <h2 class="underline-big">Blog</h2>
+            </div>
+            <h4>sous-titre</h4>
+            <%= link_to "Je découvre", blog_articles_path, class:"button btn-yellow-black btn-card"  %>
           </div>
+      </div>
 
-          <div class="home-card">
-            <%= image_tag('https://images.unsplash.com/photo-1513542992587-cd39ba97057c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzV8fGJsb2d8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
-              <div class="text-content">
-                <div class="header-content">
-                  <h2 class="underline-big">Contactez-nous</h2>
-                </div>
-                <h4>sous-titre</h4>
-                <%= link_to "Je découvre", root_path, class:"button btn-yellow-black btn-card"  %>
-              </div>
+      <div class="home-card">
+        <%= image_tag('https://images.unsplash.com/photo-1513542992587-cd39ba97057c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzV8fGJsb2d8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "backgound-home-card-image") %>
+          <div class="text-content">
+            <div class="header-content">
+              <h2 class="underline-big">Contactez-nous</h2>
+            </div>
+            <h4>sous-titre</h4>
+            <%= link_to "Je découvre", root_path, class:"button btn-yellow-black btn-card"  %>
           </div>
-        <!-- </div>
-      </div> -->
+      </div>
+    </div>
+
+    <h3 class="text-center m-5">Retrouvez-nous sur les réseaux sociaux : </h3>
+    <div class="social-media-logos">
+      <i class="link fab fa-instagram"></i>
+      <i class="link fab fa-facebook-square"></i>
+      <i class="link fab fa-linkedin"></i>
+      <i class="link fas fa-link"></i>
     </div>
   </div>
 <!-- </div> -->

@@ -1,13 +1,17 @@
 .banner-container{
-  padding-top: 30px;
+  border-bottom: 1px solid $black;
   padding-left: 75px;
   padding-right: 75px;
   z-index: 100;
 }
 
 .banner-big{
-  border-bottom: 1px solid black;
+  padding-top: 30px;
   padding-bottom: 30px;
   z-index: 100;
+}
+
+.banner-small{
+  padding-top: 0px;
 }
 

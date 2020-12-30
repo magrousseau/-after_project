@@ -13,6 +13,7 @@
   top: 0px;
   // left: 200px;
   z-index: -10;
+  // height: auto;
 }
 
 .background-home{
@@ -21,4 +22,22 @@
   bottom: 0px;
 }
 
+.social-media-logos{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.link{
+  font-size: 50px;
+  color: $black;
+  &:hover{
+    color: $gray;
+  }
+}
+
+.text-padding{
+  padding: 0 95px;
+}
 

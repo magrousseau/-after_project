@@ -1,7 +1,11 @@
 <%= image_tag('https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODF8fHNwb3J0cyUyMGdpcmx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60', class: "background-home-image") %>
 
 <div class="content-container">
-  <h1>Filtrer par thématiques</h1>
+ <div class="banner-small banner-container">
+    <h1>L'After Work</h1>
+    <h4 class="mb-4">Découvrez tous nos articles </h4>
+  </div>
+  <h2 class="ml-3 my-5">Filtrer par thématiques</h2>
 
   <% @articles.each do |article| %>
     <div class="blog-card-container">
@@ -10,7 +14,7 @@
         <div class="blog-card-content">
           <div class="card-title-content">
             <h2><%= link_to article.title, blog_article_path(article) %></h2>
-            <h5> written by : <%= article.user.first_name %> </h5>
+            <h5> Ecrit par : <%= article.user.first_name %> </h5>
           </div>
           <p> <%= article.description %> </p>
         </div>
