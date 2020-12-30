@@ -4,7 +4,7 @@
   display: flex;
   margin: 10px auto;
   background-color: #ffffff61;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .blog-card-text-content{
@@ -13,7 +13,7 @@
 }
 
 .blog-card-img{
-  border-radius: 15px;
+  border-radius: 5px;
   object-fit: cover;
   // filter: brightness(1.2) invert(0);
 }
