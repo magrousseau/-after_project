@@ -1,0 +1,26 @@
+<div class="content-container">
+  <%#= cl_image_tag @article.photos.first.key, height: 200, width: 300, crop: :fill %>
+  <div class="mb-5">
+    <h1> <%= @article.title %> </h1>
+    <h3> écrit par : <%= @article.user.first_name %>  le <%= @article.date.strftime("%d %B, %Y") %></h3>
+    <p> <%= @article.description %> </p>
+    <% @article.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>
+    <% end %>
+    <%= @article.rich_content %>
+  </div>
+
+
+    <%= link_to "back", blog_articles_path, class:"button btn-yellow-black" %>
+    <% if @user %>
+    <%= link_to "edit", edit_blog_article_path(@article), class:"button btn-yellow-black" %>
+    <%= link_to "delete", blog_article_path(@article), class:"button btn-yellow-black",
+                                          method: :delete,
+                                          data: { confirm: "Are you sure?" } %>
+
+    <% end %>
+</div>
+
+
+
+
