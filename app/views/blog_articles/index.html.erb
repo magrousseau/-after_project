@@ -21,7 +21,7 @@
           <p> <%= article.description %> </p>
         </div>
         <div class="container-btn">
-          <h5><%= article.date %></h5>
+          <h5><%= article.date.strftime("%d/%m/%Y")  %></h5>
           <%= link_to "Je découvre",blog_article_path(article), class:"button btn-yellow-black" %>
         </div>
       </div>
