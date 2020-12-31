@@ -28,7 +28,7 @@ coralie.save!
 puts "#{coralie.first_name} created!"
 
 aleks = User.new(first_name: 'Aleks', last_name: 'Putra', email: "aleks@gmail.com", password: "123456")
-magali.save!
+aleks.save!
 puts "#{aleks.first_name} created!"
 
 #Blog Articles
@@ -42,7 +42,7 @@ puts "> Creating blog articles..."
     description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
     content: Faker::Lorem.paragraphs(number: 8),
     date: DateTime.now,
-    user: magali
+    user: User.find(User.pluck(:id).sample)
   )
   3.times do
     file = URI.open("https://source.unsplash.com/random")
