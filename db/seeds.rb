@@ -18,12 +18,18 @@ User.destroy_all
 puts "> Creating users..."
 
 magali = User.new(first_name: 'Magali', last_name: 'Rousseau', email: "magali@gmail.com", password: "123456")
-
 # file = URI.open("app/assets/images/magali.jpg")
 # magali.avatar.attach(io: file, filename: "avatar", content_type: "image/jpg")
 magali.save!
-
 puts "#{magali.first_name} created!"
+
+coralie = User.new(first_name: 'Coralie', last_name: 'Dobral', email: "coralie@gmail.com", password: "123456")
+coralie.save!
+puts "#{coralie.first_name} created!"
+
+aleks = User.new(first_name: 'Aleks', last_name: 'Putra', email: "aleks@gmail.com", password: "123456")
+magali.save!
+puts "#{aleks.first_name} created!"
 
 #Blog Articles
 require 'faker'
