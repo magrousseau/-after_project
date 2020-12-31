@@ -21,7 +21,7 @@ class BlogArticlesController < ApplicationController
     @article.user = current_user
     @article.date = DateTime.now
     if @article.save
-        redirect_to blog_article_path(@article)
+        redirect_to blog_article_path(@article), notice: 'Article was successfully created.'
     else
         render 'new'
     end
@@ -30,7 +30,7 @@ class BlogArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:blog_article).permit(:title, :description, :content, photos: [])
+    params.require(:blog_article).permit(:title, :description, :rich_content, photos: [])
   end
 
   def find_article

@@ -15,11 +15,11 @@
         <%# if user_signed_in? %>
 
         <li class="nav-item active">
-          <%= link_to "Home", "/", class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
-          <%= link_to "Blog", "blog_articles", class: "nav-link" %>
+          <%= link_to "Blog", blog_articles_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
