@@ -9,7 +9,9 @@
 
   <% @articles.each do |article| %>
     <div class="blog-card-container">
-      <%= cl_image_tag article.photos.first.key, width: 300, crop: :fill, class:"blog-card-img" %>
+      <% if article.photos.first %>
+        <%= cl_image_tag article.photos.first.key, width: 300, crop: :fill, class:"blog-card-img" %>
+      <% end %>
       <div class="blog-card-text-content">
         <div class="blog-card-content">
           <div class="card-title-content">
