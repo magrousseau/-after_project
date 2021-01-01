@@ -47,7 +47,7 @@ class BlogArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:blog_article).permit(:title, :description, :rich_content, photos: [])
+    params.require(:blog_article).permit(:title, :description, :rich_content, :tag_list, photos: [])
   end
 
   def find_article
