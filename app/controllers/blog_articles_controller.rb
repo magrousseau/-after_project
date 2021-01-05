@@ -21,6 +21,9 @@ class BlogArticlesController < ApplicationController
     authorize @article
     @article.user = current_user
     @article.date = Time.now
+    tag_list_raw = params[:blog_article][:tags].drop(1)
+    @article.tag_list = tag_list_raw
+    # @article.tag_list.add(:tags)
     if @article.save
         redirect_to blog_article_path(@article), notice: 'Article was successfully created.'
     else
@@ -47,7 +50,7 @@ class BlogArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:blog_article).permit(:title, :description, :rich_content, photos: [])
+    params.require(:blog_article).permit(:title, :description, :rich_content, :tag_list, photos: [])
   end
 
   def find_article

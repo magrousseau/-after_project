@@ -9,5 +9,9 @@ class BlogArticle < ApplicationRecord
   has_many_attached :photos
   has_rich_text :rich_content
 
-  # scope :order_by_date, -> { order(date: :desc) }
+  acts_as_taggable_on :tags
+
+  scope :order_by_date, -> { order(date: :desc) }
+
+  TAGS = ["bien-être", "santé", "performance", "entreprises", "conseils"]
 end
