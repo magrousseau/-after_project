@@ -6,7 +6,9 @@
     <div class="form-inputs">
       <%= f.input :title %>
     </div>
-    <%= f.input :tag_list,     as: :check_boxes %>
+    <%= f.input :tags, as: :check_boxes,
+                           collection: BlogArticle::TAGS,
+                           checked: @article.tag_list.add.pluck(:tags)%>
     <div class="form-inputs">
       <%= f.input :description %>
     </div>

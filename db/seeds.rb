@@ -43,6 +43,7 @@ puts "> Creating blog articles..."
     content: Faker::Lorem.paragraphs(number: 8),
     date: DateTime.now,
     user: User.find(User.pluck(:id).sample)
+    tag_list: ["bien-être", "santé", "performance", "entreprises", "conseils"].sample(4)
   )
   3.times do
     file = URI.open("https://source.unsplash.com/random")
