@@ -42,7 +42,23 @@
   padding: 20px 40px;
 }
 .underline-big{
-  background: linear-gradient(#bee4dd00 60%, $yellow 40%);
-  background-position: top 35px left 56px;
+  font-size: 30px;
+  font-weight: 700;
+  background-image: linear-gradient(#bee4dd00 50%, #D7F171 50%);
+  padding-right: 4px;
+  padding-bottom: 2px;
+  background-position: 6px 2px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: all 0.18s ease 0s;
+  height: 24px;
+  color: $black;
+  &:hover{
+    text-decoration: none;
+    color: $black;
+    background-position: 6px 14px;
+    transition: all 0.18s ease 0s;
+  }
+
 }
 
