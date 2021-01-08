@@ -33,6 +33,7 @@
   }
   h5{
     margin-top: -8px;
+    margin-bottom: -12px;
   }
   a{
     color: black;
@@ -60,8 +61,10 @@
   box-shadow: 1px 1px 5px #0000002e;
 }
 
-.tag_list{
+.tag-list-card{
   display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 @media (max-width: 914px){
