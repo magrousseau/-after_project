@@ -1,0 +1,35 @@
+.blog-container {
+  padding-top: 30px;
+  padding-left: 10em;
+  padding-right: 10em;
+  min-height:100%;
+  position: relative;
+}
+
+.blog-title{
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.author-box{
+display: flex;
+width: 95%;
+justify-content: space-between;
+padding-left: 30px;
+margin-bottom: -30px;
+margin-top: 30px;
+align-items: flex-end;
+}
+
+.author-infos{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 88%;
+}
+
+.tag-list-show{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}

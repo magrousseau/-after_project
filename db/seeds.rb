@@ -18,16 +18,20 @@ User.destroy_all
 puts "> Creating users..."
 
 magali = User.new(first_name: 'Magali', last_name: 'Rousseau', email: "magali@gmail.com", password: "123456")
-# file = URI.open("app/assets/images/magali.jpg")
-# magali.avatar.attach(io: file, filename: "avatar", content_type: "image/jpg")
+file = URI.open("app/assets/images/profile/magali.jpg")
+magali.avatar.attach(io: file, filename: "avatar", content_type: "image/jpg")
 magali.save!
 puts "#{magali.first_name} created!"
 
 coralie = User.new(first_name: 'Coralie', last_name: 'Dobral', email: "coralie@gmail.com", password: "123456")
+file = URI.open("app/assets/images/profile/coralie.jpg")
+coralie.avatar.attach(io: file, filename: "avatar", content_type: "image/jpg")
 coralie.save!
 puts "#{coralie.first_name} created!"
 
 aleks = User.new(first_name: 'Aleks', last_name: 'Putra', email: "aleks@gmail.com", password: "123456")
+file = URI.open("app/assets/images/profile/Aleks.jpg")
+aleks.avatar.attach(io: file, filename: "avatar", content_type: "image/jpg")
 aleks.save!
 puts "#{aleks.first_name} created!"
 
@@ -43,7 +47,7 @@ puts "> Creating blog articles..."
     content: Faker::Lorem.paragraphs(number: 8),
     date: DateTime.now,
     user: User.find(User.pluck(:id).sample),
-    tag_list: ["bien-être", "santé", "performance", "entreprises", "conseils"].sample(2)
+    tag_list: ["bien-être", "santé", "performance", "entreprises", "conseils"].sample(3)
   )
   3.times do
     file = URI.open("https://source.unsplash.com/random")

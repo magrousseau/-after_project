@@ -1,17 +1,20 @@
-<div class="content-container">
-  <%#= cl_image_tag @article.photos.first.key, height: 200, width: 300, crop: :fill %>
+<div class="blog-container">
   <div class="mb-5">
-    <h1> <%= @article.title %> </h1>
-    <div class="tag_list">
+    <h1 class = "blog-title"> <%= @article.title %> </h1>
+    <div class="tag-list-show">
       <% @article.tag_list.each do |tag| %>
         <div class="tag_btn mr-5"><%= tag %></div>
       <% end %>
     </div>
-    <h3> écrit par : <%= @article.user.first_name %>  le <%= @article.date.strftime("%d %B, %Y") %></h3>
+    <div class="author-box">
+      <%= cl_image_tag @article.user.avatar.key, class:"avatar" %>
+      <div class="author-infos">
+        <p> écrit par : <%= @article.user.first_name %> </p>
+        <p><%= @article.date.strftime("%d %B, %Y") %></p>
+      </div>
+    </div>
+    <%= cl_image_tag @article.photos.first.key, class:"blog-article-banner my-5" %>
     <p> <%= @article.description %> </p>
-    <% @article.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>
-    <% end %>
     <%= @article.rich_content %>
   </div>
 
