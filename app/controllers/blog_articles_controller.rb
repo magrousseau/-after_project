@@ -2,7 +2,7 @@ class BlogArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_article, only: [:show, :edit, :update, :destroy]
   def index
-    @articles = BlogArticle.all
+    @articles = BlogArticle.all.order('date DESC')
     authorize @articles
   end
 
