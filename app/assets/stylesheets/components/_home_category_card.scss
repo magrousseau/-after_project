@@ -10,8 +10,6 @@
   position: relative;
 }
 
-
-
 .home-card{
   border-radius: 5px;
   height: 230px;
@@ -59,6 +57,14 @@
     background-position: 6px 14px;
     transition: all 0.18s ease 0s;
   }
+}
 
+@media (max-width: 830px){
+  .text-content{
+    padding: 10px 20px;
+  }
+  .card-container{
+    padding: 0 45px;
+  }
 }
 
