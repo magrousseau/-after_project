@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_01_094450) do
+ActiveRecord::Schema.define(version: 2021_01_31_182311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,15 +63,8 @@ ActiveRecord::Schema.define(version: 2021_01_01_094450) do
     t.text "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "podcast_invitations", force: :cascade do |t|
-    t.bigint "guest_id", null: false
-    t.bigint "podcast_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["guest_id"], name: "index_podcast_invitations_on_guest_id"
-    t.index ["podcast_id"], name: "index_podcast_invitations_on_podcast_id"
+    t.bigint "podcast_id"
+    t.index ["podcast_id"], name: "index_guests_on_podcast_id"
   end
 
   create_table "podcasts", force: :cascade do |t|
@@ -81,6 +74,8 @@ ActiveRecord::Schema.define(version: 2021_01_01_094450) do
     t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "small_description"
+    t.integer "podcast_number"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -126,7 +121,6 @@ ActiveRecord::Schema.define(version: 2021_01_01_094450) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blog_articles", "users"
-  add_foreign_key "podcast_invitations", "guests"
-  add_foreign_key "podcast_invitations", "podcasts"
+  add_foreign_key "guests", "podcasts"
   add_foreign_key "taggings", "tags"
 end
