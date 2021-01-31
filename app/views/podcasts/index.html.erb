@@ -1,0 +1,40 @@
+<div class="content-container">
+ <div class="banner-small banner-container">
+    <h1>L'After Sport</h1>
+    <h4 class="mb-4">Découvrez tous nos podcasts </h4>
+  </div>
+  <h2 class="blog-index-title">Filtrer par thématiques</h2>
+
+
+  <% @podcasts.each do |podcast| %>
+    <div class="blog-card-container">
+      <% podcast.guests.each do |guest| %>
+        <% if guest.photo %>
+          <%= cl_image_tag guest.photo.key, width: 300, crop: :fill, class:"blog-card-img" %>
+        <% end %>
+      <div class="blog-card-text-content">
+        <div class="blog-card-content">
+          <div class="card-title-content">
+            <h2> #<%= podcast.podcast_number %></h2>
+            <h3> <%= podcast.title %> </h3>
+            <h5> Invité : <%= guest.first_name %> <%= guest.last_name %> </h5>
+          </div>
+          <div class="tag-list-card">
+            <%# article.tag_list.each do |tag| %>
+              <div class="tag_btn mr-2"><%#= tag %></div>
+            <%# end %>
+          </div>
+          <p> <%= podcast.small_description %> </p>
+        </div>
+        <div class="container-btn">
+          <h5><%= podcast.date.strftime("%d/%m/%Y")  %></h5>
+          <%= link_to "Je découvre",podcasts_path, class:"button btn-yellow-black" %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+
