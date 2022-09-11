@@ -1,6 +1,6 @@
 <div class="content-container">
  <div class="banner-small banner-container">
-    <h1>L'After Sport</h1>
+    <h1>After Sport</h1>
     <h4 class="mb-4">Découvrez tous nos podcasts </h4>
   </div>
   <h2 class="blog-index-title">Filtrer par thématiques</h2>
@@ -13,7 +13,9 @@
           <%= cl_image_tag guest.photo.key, width: 300, crop: :fill, class:"blog-card-img" %>
         <% end %>
       <div class="blog-card-text-content">
+
         <div class="blog-card-content">
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/fr/podcast/#{podcast.link}"></iframe>
           <div class="card-title-content">
             <h2> #<%= podcast.podcast_number %></h2>
             <h3> <%= podcast.title %> </h3>
@@ -35,6 +37,3 @@
     </div>
   <% end %>
 </div>
-
-
-

@@ -1,6 +1,5 @@
 # -------------------------- FIRST SEED -------------------------
 
-
 puts "> Deleting all records..."
 
 BlogArticle.destroy_all
@@ -49,8 +48,9 @@ puts "> Creating blog articles..."
     user: User.find(User.pluck(:id).sample),
     tag_list: ["bien-être", "santé", "performance", "entreprises", "conseils"].sample(3)
   )
+  puts "#{article.title} created!"
   3.times do
-    file = URI.open("https://source.unsplash.com/random")
+    file = URI.open("https://unsplash.com/photos/Ag7hgk0NLnE")
     article.photos.attach(io: file, filename: "photo", content_type: "image/jpg")
   end
   article.save!
@@ -65,7 +65,7 @@ podcast_1 = Podcast.new(
         small_description: Faker::TvShows::BigBangTheory.quote,
         podcast_number: '1',
         description: Faker::Lorem.paragraphs(number: 8),
-        link: 'www.pmr.fr',
+        link: "10-lauriane-lamperim-reconversion-dans-le-surf-la-vie/id1571032435?i=1000551845453",
         date: DateTime.now - 5
       )
 podcast_1.save!
@@ -75,7 +75,7 @@ podcast_2 = Podcast.new(
         small_description: Faker::TvShows::BigBangTheory.quote,
         podcast_number: '2',
         description: Faker::Lorem.paragraphs(number: 8),
-        link: 'www.pmr.fr',
+        link: "8-maxine-eouzan-vivre-de-défi-en-défi-mais-dans/id1571032435?i=1000542168899",
         date: DateTime.now - 4
       )
 podcast_2.save!
@@ -85,7 +85,7 @@ podcast_3 = Podcast.new(
         small_description: Faker::TvShows::BigBangTheory.quote,
         podcast_number: '3',
         description: Faker::Lorem.paragraphs(number: 8),
-        link: 'www.pmr.fr',
+        link: "7-laure-larrory-dun-rêve-à-lautre-comment-rebondir/id1571032435?i=1000537069410",
         date: DateTime.now - 3
       )
 podcast_3.save!
@@ -95,7 +95,7 @@ podcast_4 = Podcast.new(
         small_description: Faker::TvShows::BigBangTheory.quote,
         podcast_number: '4',
         description: Faker::Lorem.paragraphs(number: 8),
-        link: 'www.pmr.fr',
+        link: '6-alain-bernard-de-la-médaille-dor-olympique-à-sa/id1571032435?i=1000531162873',
         date: DateTime.now - 2
       )
 podcast_4.save!
@@ -105,7 +105,7 @@ podcast_5 = Podcast.new(
         small_description: Faker::TvShows::BigBangTheory.quote,
         podcast_number: '5',
         description: Faker::Lorem.paragraphs(number: 8),
-        link: 'www.pmr.fr',
+        link: "5-amaury-leveaux-vivre-sa-vie-comme-une-course-de-natation/id1571032435?i=1000529881139",
         date: DateTime.now
       )
 podcast_5.save!
@@ -145,9 +145,3 @@ roxana.save!
 
 
 puts "guests created !"
-
-
-
-
-
-

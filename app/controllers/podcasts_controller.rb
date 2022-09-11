@@ -9,29 +9,28 @@ class PodcastsController < ApplicationController
   end
 
   def show
-    # @user = current_user
+    @user = current_user
   end
 
-  # def new
-  #   @user = current_user
-  #   @article = BlogArticle.new
-  #   authorize @article
-  # end
+  def new
+    @user = current_user
+    @podcast = Podcast.new
+    authorize @podcast
+  end
 
-  # def create
-  #   @article = BlogArticle.new(article_params)
-  #   authorize @article
-  #   @article.user = current_user
-  #   @article.date = Time.now
-  #   tag_list_raw = params[:blog_article][:tags].drop(1)
-  #   @article.tag_list = tag_list_raw
-  #   # @article.tag_list.add(:tags)
-  #   if @article.save
-  #       redirect_to blog_article_path(@article), notice: 'Article was successfully created.'
-  #   else
-  #       render 'new'
-  #   end
-  # end
+  def create
+    @podcast = Podcast.new(podcast_params)
+    authorize @podcast
+    @podcast.date = Time.now
+    # tag_list_raw = params[:blog_article][:tags].drop(1)
+    # @podcast.tag_list = tag_list_raw
+    # @article.tag_list.add(:tags)
+    if @podcast.save
+        redirect_to podcasts_path, notice: 'Podcast episode was successfully created.'
+    else
+        render 'new'
+    end
+  end
 
   # def edit
   #   authorize @article
@@ -51,7 +50,7 @@ class PodcastsController < ApplicationController
 
   private
 
-  def article_params
+  def podcast_params
     params.require(:podcast).permit(:title, :description, :small_description, :link, :date, :podcast_number, photos: [])
   end
 

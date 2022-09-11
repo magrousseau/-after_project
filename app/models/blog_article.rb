@@ -3,7 +3,7 @@ class BlogArticle < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true, length: { maximum: 300 }
-  # validates :content, presence: true
+  validates :link, presence: true
   validates :date, presence: true
 
   has_many_attached :photos
