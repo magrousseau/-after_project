@@ -42,7 +42,7 @@ gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'unsplash'
 
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
